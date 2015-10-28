@@ -3,11 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vinotecacliente2;
+package vinotecacliente;
 
 import controlador.ControladorAbonadoRemote;
-import dominio.Bodega;
-import dominio.Vino;
 import javax.ejb.EJB;
 
 /**
