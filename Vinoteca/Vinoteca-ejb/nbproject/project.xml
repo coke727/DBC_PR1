@@ -6,7 +6,7 @@
             <name>Vinoteca-ejb</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <included-library dirs="200">reference.VinotecaEntityLibrary.jar</included-library>
-            <included-library dirs="200">reference.VinotecaRemoteInterface.jar</included-library>
+            <included-library dirs="200">reference.VinoteRemoteInterface.jar</included-library>
             <source-roots>
                 <root id="src.dir" name="Source Packages"/>
             </source-roots>
@@ -16,7 +16,7 @@
         </data>
         <references xmlns="http://www.netbeans.org/ns/ant-project-references/1">
             <reference>
-                <foreign-project>VinotecaEntityLibrary</foreign-project>
+                <foreign-project>VinoteRemoteInterface</foreign-project>
                 <artifact-type>jar</artifact-type>
                 <script>build.xml</script>
                 <target>jar</target>
@@ -24,7 +24,7 @@
                 <id>jar</id>
             </reference>
             <reference>
-                <foreign-project>VinotecaRemoteInterface</foreign-project>
+                <foreign-project>VinotecaEntityLibrary</foreign-project>
                 <artifact-type>jar</artifact-type>
                 <script>build.xml</script>
                 <target>jar</target>

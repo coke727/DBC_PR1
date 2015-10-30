@@ -5,9 +5,9 @@
  */
 package persistencia;
 
-import dominio.Abonado;
 import java.util.List;
 import javax.ejb.Local;
+import modelo.Abonado;
 
 /**
  *

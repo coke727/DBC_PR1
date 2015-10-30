@@ -5,10 +5,10 @@
  */
 package persistencia;
 
-import dominio.Referencia;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import modelo.Referencia;
 
 /**
  *
