@@ -16,7 +16,7 @@ import modelo.Referencia;
 @Remote
 public interface ControladorVinoRemote {
 
-    List<modelo.Vino> getVinos(String origen, String categoria);
+    List<modelo.Vino> getVinos(String origen, char categoria);
 
     Referencia getReferencia(int vinoID);
 
