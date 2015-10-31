@@ -21,6 +21,7 @@ public class Main {
      */
     public static void main(String[] args) {
         controladorAbonado.sayHey();
+        System.out.println(controladorAbonado.getNif("jorcuad"));
     }
     
 }

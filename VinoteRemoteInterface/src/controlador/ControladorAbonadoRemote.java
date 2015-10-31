@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import java.util.List;
 import javax.ejb.Remote;
 
 /**
@@ -15,5 +16,15 @@ import javax.ejb.Remote;
 public interface ControladorAbonadoRemote {
 
     void sayHey();
+
+    String getNif(String login);
+
+    boolean isPasswdOK(String login, String passwd);
+
+    List<modelo.Preferencia> getPreferencias(String login);
+    
+    List<modelo.Preferencia> getPreferencias(modelo.Persona persona);
+
+    boolean isAbonado(String login);
     
 }
