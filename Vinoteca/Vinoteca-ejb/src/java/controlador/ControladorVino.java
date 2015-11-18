@@ -69,7 +69,7 @@ public class ControladorVino implements ControladorVinoRemote {
             if(Objects.equals(item.getId(), referencia.getVinoid().getId())) 
                 hayVino=true ;
         }
-        if(hayVino == false) vinoFacade.create(referencia.getVinoid());
+        //if(!hayVino) vinoFacade.create(referencia.getVinoid());
         referenciaFacade.create(referencia);
         //crear vino, puede hacerse en cascada
     }

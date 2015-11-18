@@ -10,6 +10,7 @@ import controlador.ControladorVinoRemote;
 import java.util.List;
 import javax.ejb.EJB;
 import modelo.Preferencia;
+import modelo.Referencia;
 import modelo.Vino;
 
 /**
@@ -26,12 +27,42 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        controladorAbonado.sayHey();
-        System.out.println(controladorAbonado.getNif("jorcuad"));
-        List<Preferencia> cosos = controladorAbonado.getPreferencias("luchurt");
-        for(Preferencia i : cosos) System.out.println(i);
+        //Controlador Vino
+        //Get Vinos
         List<Vino> vinos = controladorVino.getVinos("a",'a');
         for(Vino i : vinos) System.out.println(i);
+        
+        //Get Referencia
+        Referencia r = controladorVino.getReferencia(0);
+        System.out.println(r);
+        
+        //Add Referencia
+        //Referencia newRef = new Referencia(42, 'T', (short)75, (float)12.0, 'T');
+        //controladorVino.addReferencia(newRef);
+        
+        
+        //Controlador Abonado
+        
+        //Get Preferencias
+        List<Preferencia> cosos = controladorAbonado.getPreferencias("luchurt");
+        for(Preferencia i : cosos) System.out.println(i);
+        
+        //isAbonado
+        System.out.println("OK: " + controladorAbonado.isAbonado("luchurt"));
+        System.out.println("FALSE : " + controladorAbonado.isAbonado("luchurtasdasd"));
+
+        
+        //Get Nif
+        System.out.println(controladorAbonado.getNif("jorcuad"));
+        
+        //isPassOk
+        System.out.println("PASS OK : " + controladorAbonado.isPasswdOK("jorcuad","1234"));
+        System.out.println("PASS FALSE : " + controladorAbonado.isPasswdOK("jorcuad","213"));
+
+        
+        
+        
+        
     }
     
 }
