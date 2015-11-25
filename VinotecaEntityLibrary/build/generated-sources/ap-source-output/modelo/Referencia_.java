@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import modelo.Vino;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-10-31T00:55:35")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-11-25T16:35:46")
 @StaticMetamodel(Referencia.class)
 public class Referencia_ { 
 

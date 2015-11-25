@@ -73,8 +73,7 @@ public class Vino implements Serializable {
         this.id = id;
     }
 
-    public Vino(Integer id, String nombrecomercial, short ano, String comentario, int iddenominacion, Character categoria) {
-        this.id = id;
+    public Vino(int id, String nombrecomercial, short ano, String comentario, int iddenominacion, Character categoria) {
         this.nombrecomercial = nombrecomercial;
         this.ano = ano;
         this.comentario = comentario;

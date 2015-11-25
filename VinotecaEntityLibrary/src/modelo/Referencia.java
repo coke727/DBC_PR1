@@ -55,6 +55,7 @@ public class Referencia implements Serializable {
     @JoinColumn(name = "VINOID", referencedColumnName = "ID")
     @ManyToOne(optional = false)
     private Vino vinoid;
+   
 
     public Referencia() {
     }
@@ -63,12 +64,12 @@ public class Referencia implements Serializable {
         this.codigo = codigo;
     }
 
-    public Referencia(Integer codigo, Character esporcajas, short contenidoencl, float precio, Character disponible) {
-        this.codigo = codigo;
+    public Referencia(Character esporcajas, short contenidoencl, float precio, Character disponible, Vino vino) {
         this.esporcajas = esporcajas;
         this.contenidoencl = contenidoencl;
         this.precio = precio;
         this.disponible = disponible;
+        this.vinoid = vino;
     }
 
     public Integer getCodigo() {

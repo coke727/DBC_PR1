@@ -67,7 +67,7 @@ public class ControladorVino implements ControladorVinoRemote {
         boolean hayVino = false;
         for(modelo.Vino item: vinos){
             if(Objects.equals(item.getId(), referencia.getVinoid().getId())) 
-                hayVino=true ;
+            hayVino=true ;
         }
         if(hayVino == false) vinoFacade.create(referencia.getVinoid());
         referenciaFacade.create(referencia);
