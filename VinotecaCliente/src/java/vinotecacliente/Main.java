@@ -61,9 +61,9 @@ public class Main {
         //Añadimos una referencias
         System.out.println("Añadimos referencia:");
         Referencia nuevaRef = new Referencia('T', (short) 666, (float) 23, 'T', vinos.get(0));
-        Referencia nuevaRefNew = new Referencia('T', (short) 666, (float) 23, 'T', new Vino(34,"duero", (short)1992, "es un rio", 23, 'R'));
+        //Referencia nuevaRefNew = new Referencia('T', (short) 666, (float) 23, 'T', new Vino(34,"duero", (short)1992, "es un rio", 23, 'R'));
         controladorVino.addReferencia(nuevaRef);
-        controladorVino.addReferencia(nuevaRefNew);
+        //controladorVino.addReferencia(nuevaRefNew);
     }
     
 }
