@@ -5,7 +5,9 @@
  */
 package controlador;
 
+import java.util.ArrayList;
 import javax.ejb.Remote;
+import modelo.Pedido;
 
 /**
  *
@@ -15,5 +17,13 @@ import javax.ejb.Remote;
 public interface controladorPedidoRemote {
 
     void sayHey();
+
+    void newPedido(Pedido pedido);
+
+    ArrayList<Pedido> getPedidosPendientes();
+
+    ArrayList<Pedido> getPedidosAbonado(String nif);
+
+    void editPedido(int numeroPedido, String estado);
     
 }

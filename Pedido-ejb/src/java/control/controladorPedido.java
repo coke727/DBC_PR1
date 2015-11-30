@@ -6,7 +6,9 @@
 package control;
 
 import controlador.controladorPedidoRemote;
+import java.util.ArrayList;
 import javax.ejb.Stateless;
+import modelo.Pedido;
 
 /**
  *
@@ -20,6 +22,23 @@ public class controladorPedido implements controladorPedidoRemote {
         System.out.println("HEEEEEEYYYY");
     }
 
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
+    @Override
+    public void newPedido(Pedido pedido) {
+    }
+
+    @Override
+    public ArrayList<Pedido> getPedidosPendientes() {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Pedido> getPedidosAbonado(String nif) {
+        return null;
+    }
+
+    @Override
+    public void editPedido(int numeroPedido, String estado) {
+    }
+
+    
 }
