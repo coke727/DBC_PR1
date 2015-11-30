@@ -8,6 +8,8 @@
     <class>modelo.Referencia</class>
     <class>modelo.Persona</class>
     <class>modelo.Bodega</class>
+    <class>modelo.Pedido</class>
+    <class>modelo.Estadopedido</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/vino"/>
       <property name="javax.persistence.jdbc.password" value="root"/>

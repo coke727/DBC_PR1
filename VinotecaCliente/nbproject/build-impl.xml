@@ -771,11 +771,13 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init" if="no.dist.ear.dir" name="-deps-module-jar" unless="no.deps">
         <ant antfile="${project.AbonadoRemoteInterface}/build.xml" inheritall="false" target="jar"/>
+        <ant antfile="${project.PedidoRemoteInterface}/build.xml" inheritall="false" target="jar"/>
         <ant antfile="${project.VinoteRemoteInterface}/build.xml" inheritall="false" target="jar"/>
         <ant antfile="${project.VinotecaEntityLibrary}/build.xml" inheritall="false" target="jar"/>
     </target>
     <target depends="init" if="dist.ear.dir" name="-deps-ear-jar" unless="no.deps">
         <ant antfile="${project.AbonadoRemoteInterface}/build.xml" inheritall="false" target="jar"/>
+        <ant antfile="${project.PedidoRemoteInterface}/build.xml" inheritall="false" target="jar"/>
         <ant antfile="${project.VinoteRemoteInterface}/build.xml" inheritall="false" target="jar"/>
         <ant antfile="${project.VinotecaEntityLibrary}/build.xml" inheritall="false" target="jar"/>
     </target>
@@ -791,19 +793,22 @@ exists or setup the property manually. For example like this:
         <basename file="${reference.VinotecaEntityLibrary.jar}" property="manifest.reference.VinotecaEntityLibrary.jar"/>
         <basename file="${reference.VinoteRemoteInterface.jar}" property="manifest.reference.VinoteRemoteInterface.jar"/>
         <basename file="${reference.AbonadoRemoteInterface.jar}" property="manifest.reference.AbonadoRemoteInterface.jar"/>
+        <basename file="${reference.PedidoRemoteInterface.jar}" property="manifest.reference.PedidoRemoteInterface.jar"/>
         <manifest file="${build.ear.classes.dir}/META-INF/MANIFEST.MF" mode="update">
-            <attribute name="Extension-List" value="jar-1 jar-2 jar-3 "/>
+            <attribute name="Extension-List" value="jar-1 jar-2 jar-3 jar-4 "/>
             <attribute name="jar-1-Extension-Name" value="${manifest.reference.VinotecaEntityLibrary.jar}"/>
             <attribute name="jar-2-Extension-Name" value="${manifest.reference.VinoteRemoteInterface.jar}"/>
             <attribute name="jar-3-Extension-Name" value="${manifest.reference.AbonadoRemoteInterface.jar}"/>
+            <attribute name="jar-4-Extension-Name" value="${manifest.reference.PedidoRemoteInterface.jar}"/>
         </manifest>
     </target>
     <target depends="compile" if="dist.ear.dir" name="library-inclusion-in-manifest">
         <copyfiles files="${reference.VinotecaEntityLibrary.jar}" manifestproperty="manifest.reference.VinotecaEntityLibrary.jar" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.VinoteRemoteInterface.jar}" manifestproperty="manifest.reference.VinoteRemoteInterface.jar" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.AbonadoRemoteInterface.jar}" manifestproperty="manifest.reference.AbonadoRemoteInterface.jar" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.PedidoRemoteInterface.jar}" manifestproperty="manifest.reference.PedidoRemoteInterface.jar" todir="${dist.ear.dir}/lib"/>
         <manifest file="${build.ear.classes.dir}/META-INF/MANIFEST.MF" mode="update">
-            <attribute name="Class-Path" value="${manifest.reference.VinotecaEntityLibrary.jar} lib/${manifest.reference.VinotecaEntityLibrary.jar} ${manifest.reference.VinoteRemoteInterface.jar} lib/${manifest.reference.VinoteRemoteInterface.jar} ${manifest.reference.AbonadoRemoteInterface.jar} lib/${manifest.reference.AbonadoRemoteInterface.jar} "/>
+            <attribute name="Class-Path" value="${manifest.reference.VinotecaEntityLibrary.jar} lib/${manifest.reference.VinotecaEntityLibrary.jar} ${manifest.reference.VinoteRemoteInterface.jar} lib/${manifest.reference.VinoteRemoteInterface.jar} ${manifest.reference.AbonadoRemoteInterface.jar} lib/${manifest.reference.AbonadoRemoteInterface.jar} ${manifest.reference.PedidoRemoteInterface.jar} lib/${manifest.reference.PedidoRemoteInterface.jar} "/>
         </manifest>
     </target>
     <target name="-copy-meta-inf">
@@ -1308,6 +1313,7 @@ exists or setup the property manually. For example like this:
             -->
     <target depends="init" name="deps-clean" unless="no.deps">
         <ant antfile="${project.AbonadoRemoteInterface}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.PedidoRemoteInterface}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.VinoteRemoteInterface}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.VinotecaEntityLibrary}/build.xml" inheritall="false" target="clean"/>
     </target>

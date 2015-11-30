@@ -7,6 +7,7 @@ package vinotecacliente;
 
 import controlador.ControladorAbonadoRemote;
 import controlador.ControladorVinoRemote;
+import controlador.controladorPedidoRemote;
 import java.util.List;
 import javax.ejb.EJB;
 import modelo.Preferencia;
@@ -18,6 +19,9 @@ import modelo.Vino;
  * @author coke
  */
 public class Main {
+
+    @EJB
+    private static controladorPedidoRemote controladorPedido;
     @EJB
     private static ControladorVinoRemote controladorVino;
     @EJB
@@ -51,7 +55,7 @@ public class Main {
         //Obtener lista de vinos
         System.out.println("Tenemos rioja y veneno:");
         List<Vino> vinos = controladorVino.getVinos("23", 'R');
-        for(Vino i : vinos) System.out.println(i);
+//        for(Vino i : vinos) System.out.println(i);
         
         //Obtenemos referencias de un vino
         System.out.println("Obtenemos referencias del vino 1:");
@@ -59,11 +63,13 @@ public class Main {
         System.out.println(referencia);
         
         //Añadimos una referencias
-        System.out.println("Añadimos referencia:");
-        Referencia nuevaRef = new Referencia('T', (short) 666, (float) 23, 'T', vinos.get(0));
+        //System.out.println("Añadimos referencia:");
+        //Referencia nuevaRef = new Referencia('T', (short) 666, (float) 23, 'T', vinos.get(0));
         //Referencia nuevaRefNew = new Referencia('T', (short) 666, (float) 23, 'T', new Vino(34,"duero", (short)1992, "es un rio", 23, 'R'));
-        controladorVino.addReferencia(nuevaRef);
+        //controladorVino.addReferencia(nuevaRef);
         //controladorVino.addReferencia(nuevaRefNew);
+        
+        controladorPedido.sayHey();
     }
     
 }

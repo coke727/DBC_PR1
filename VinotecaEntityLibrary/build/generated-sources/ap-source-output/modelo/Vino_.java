@@ -7,17 +7,17 @@ import javax.persistence.metamodel.StaticMetamodel;
 import modelo.Bodega;
 import modelo.Referencia;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-11-25T16:58:51")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-11-30T19:46:14")
 @StaticMetamodel(Vino.class)
 public class Vino_ { 
 
-    public static volatile SingularAttribute<Vino, Integer> id;
-    public static volatile SingularAttribute<Vino, Character> categoria;
-    public static volatile SingularAttribute<Vino, Bodega> idbodega;
-    public static volatile SingularAttribute<Vino, String> nombrecomercial;
     public static volatile SingularAttribute<Vino, Short> ano;
+    public static volatile SingularAttribute<Vino, Bodega> idbodega;
+    public static volatile SingularAttribute<Vino, Character> categoria;
     public static volatile SingularAttribute<Vino, Integer> iddenominacion;
     public static volatile CollectionAttribute<Vino, Referencia> referenciaCollection;
+    public static volatile SingularAttribute<Vino, Integer> id;
+    public static volatile SingularAttribute<Vino, String> nombrecomercial;
     public static volatile SingularAttribute<Vino, String> comentario;
 
 }

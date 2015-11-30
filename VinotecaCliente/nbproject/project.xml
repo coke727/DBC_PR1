@@ -14,10 +14,19 @@
             <included-library dirs="200">reference.VinotecaEntityLibrary.jar</included-library>
             <included-library dirs="200">reference.VinoteRemoteInterface.jar</included-library>
             <included-library dirs="200">reference.AbonadoRemoteInterface.jar</included-library>
+            <included-library dirs="200">reference.PedidoRemoteInterface.jar</included-library>
         </data>
         <references xmlns="http://www.netbeans.org/ns/ant-project-references/1">
             <reference>
                 <foreign-project>AbonadoRemoteInterface</foreign-project>
+                <artifact-type>jar</artifact-type>
+                <script>build.xml</script>
+                <target>jar</target>
+                <clean-target>clean</clean-target>
+                <id>jar</id>
+            </reference>
+            <reference>
+                <foreign-project>PedidoRemoteInterface</foreign-project>
                 <artifact-type>jar</artifact-type>
                 <script>build.xml</script>
                 <target>jar</target>
